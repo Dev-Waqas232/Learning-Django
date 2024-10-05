@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path
 
 from .views import home_view
+from blog import views
 
 urlpatterns = [
     path("", home_view),
+    path("blog/", views.blog_search_view),
     path('admin/', admin.site.urls),
 ]
